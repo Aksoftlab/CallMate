@@ -1,314 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CallMate — #1 Field CRM For Loan Collection</title>
-  <meta name="description" content="CallMate — Field CRM built for loan collection teams. Manage loan records, sync with Google Sheets, schedule auto-calls, track PTP, backup to Google Drive and more." />
-  <style>
-    /* Simple single-skin, responsive layout */
-    :root{
-      --max-w:900px;
-      --accent:#19ce9b; /* updated accent as requested */
-      --accent-dark:#16b887;
-      --muted:#666;
-      --card:#f8f9fb;
-      --radius:10px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    body{
-      margin:0;
-      background:#f2f4f8;
-      color:#222;
-      line-height:1.5;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .wrap{
-      max-width:var(--max-w);
-      margin:28px auto;
-      padding:20px;
-    }
-    header{
-      background:linear-gradient(90deg,var(--accent),var(--accent-dark));
-      color:white;
-      padding:26px;
-      border-radius:var(--radius);
-      box-shadow:0 6px 20px rgba(25,206,155,0.12);
-    }
-    header h1{
-      margin:0 0 6px 0;
-      font-size:22px;
-      letter-spacing:0.2px;
-    }
-    header p { margin:0; opacity:0.95; }
-    .hero{
-      display:flex;
-      gap:18px;
-      align-items:center;
-      margin-top:18px;
-      flex-wrap:wrap;
-    }
-    .cta{
-      margin-top:18px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CallMate - Field CRM for Loan Collection</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
     }
 
-    /* Button styles:
-       - default .btn: white background, text = accent (for top buttons)
-       - .btn.primary (used for right-column download): accent background, white text
-    */
-    .btn{
-      display:inline-block;
-      background:white; /* white background as requested for top buttons */
-      color:var(--accent); /* text color #19ce9b */
-      padding:10px 18px;
-      border-radius:8px;
-      font-weight:600;
-      text-decoration:none;
-      box-shadow:0 6px 18px rgba(11,99,216,0.06);
-      border:1px solid rgba(0,0,0,0.04);
+    /* Top Card */
+    .header-card {
+        background: #19ce9b;
+        padding: 40px 20px;
+        text-align: center;
+        color: white;
     }
-    .btn.secondary{
-      /* Features button should also be white bg with text accent */
-      background:white;
-      color:var(--accent);
-      border:1px solid rgba(0,0,0,0.04);
+    .header-card h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 800;
     }
-    .btn.primary{
-      /* final download button: accent background and white text */
-      background:var(--accent);
-      color:white;
-      box-shadow:0 8px 22px rgba(25,206,155,0.14);
-      border: none;
+    .header-card p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: white !important;
     }
 
-    main{
-      margin-top:18px;
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        margin: 10px 5px;
+        border-radius: 6px;
+        border: 2px solid #19ce9b;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
     }
-    .card{
-      background:var(--card);
-      border-radius:12px;
-      padding:16px;
-      margin:14px 0;
-      box-shadow:0 6px 18px rgba(15,20,30,0.03);
+
+    .btn-white {
+        background: white;
+        color: #19ce9b;
     }
-    h2{ margin:8px 0 12px 0; font-size:18px; }
-    ol.features{
-      padding-left:18px;
-      margin:0;
+    .btn-white:hover {
+        background: #f0f0f0;
     }
-    ol.features li{
-      margin:12px 0;
+
+    .btn-green {
+        background: #19ce9b;
+        color: white;
+        border: none;
     }
-    .feature-title{ font-weight:700; display:block; margin-bottom:6px; }
-    .muted{ color:var(--muted); font-size:14px; }
-    .screenshot{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:12px;
-      margin-top:10px;
+    .btn-green:hover {
+        opacity: 0.9;
     }
-    .screenshot img{
-      width:100%;
-      height:160px;
-      object-fit:cover;
-      border-radius:8px;
-      border:1px solid rgba(0,0,0,0.04);
-      background:linear-gradient(180deg,#fff,#eee);
+
+    /* Content Section */
+    .section {
+        padding: 30px 20px;
+        background: white;
+        margin: 20px;
+        border-radius: 10px;
     }
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 260px;
-      gap:16px;
+    .section h2 {
+        color: #19ce9b;
+        margin-bottom: 15px;
+        font-size: 26px;
     }
-    @media (max-width:880px){
-      .two-col{ grid-template-columns:1fr; }
+
+    .feature-list li {
+        margin-bottom: 12px;
+        font-size: 17px;
+        line-height: 1.5;
+        color: #000;
     }
-    footer{
-      margin-top:18px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-      padding:16px;
+
+    /* Screenshot Demo Box */
+    .screenshot {
+        width: 100%;
+        height: 200px;
+        background: #e3e3e3;
+        border: 2px dashed #bbb;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 18px;
+        margin: 20px 0;
     }
-    .badge{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(25,206,155,0.12);
-      color:var(--accent);
-      font-weight:700;
-      font-size:13px;
+
+    /* Footer Download Button */
+    .footer-download {
+        text-align: center;
+        padding: 40px 20px;
     }
-    .meta{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:6px;
-    }
-    /* small helper for list numbers */
-    ol.features li::marker{ font-weight:700; color:var(--accent); }
-  </style>
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-        <div>
-          <h1>CallMate — #1 Field CRM For Loan Collection</h1>
-          <p class="muted">Designed for field agents and collection teams — track loans, schedule calls, sync data, and close more recoveries.</p>
-        </div>
-        <div style="text-align:right">
-          <div class="badge">Field CRM • Loan Collection</div>
-          <div class="meta">One single skin — full post below</div>
-        </div>
-      </div>
 
-      <div class="hero">
-        <div style="flex:1; min-width:260px;">
-          <p class="muted" style="margin-top:12px">CallMate brings your field collection operations together: contact customers, record PTPs, schedule auto-calls, sync with Google Sheets and Drive, keep local backups, manage cash accounts, and track daily performance — all from one app.</p>
+<!-- HEADER CARD -->
+<div class="header-card">
+    <h1>CallMate #1 Field CRM For Loan Collection</h1>
+    <p>Field CRM • Loan Collection</p>
 
-          <div class="cta">
-            <!-- Replace href with your download link (apk or store) -->
-            <a class="btn" href="https://example.com/your-callmate-download.apk" id="download-now">Download Now</a>
-            <a class="btn secondary" href="#features">Features</a>
-          </div>
-        </div>
+    <a href="#" class="btn btn-white">Download Now</a>
+    <a href="#features" class="btn btn-white">Features</a>
+</div>
 
-        <!-- Demo screenshot placeholder -->
-        <div style="width:220px; min-width:180px;">
-          <img src="https://via.placeholder.com/420x260?text=CallMate+Preview" alt="CallMate preview screenshot" style="width:100%; border-radius:8px;"/>
-        </div>
-      </div>
-    </header>
+<!-- FEATURES SECTION -->
+<div class="section" id="features">
+    <h2>Powerful Features of CallMate</h2>
 
-    <main>
-      <div class="two-col">
-        <div>
-          <section id="features" class="card">
-            <h2>App Features (English)</h2>
+    <ul class="feature-list">
+        <li><b>Loan Record Management:</b> Maintain detailed loan information for every customer.</li>
 
-            <ol class="features">
-              <li>
-                <span class="feature-title">1 — Complete loan record for every customer</span>
-                <span class="muted">Maintain a full loan history per customer: outstanding amount, EMI schedule, last payments, next due date and custom notes.</span>
-              </li>
+        <li><b>Google Sheets Integration:</b> Sync and manage your data directly from Google Sheets.</li>
 
-              <li>
-                <span class="feature-title">2 — Google Sheets data management</span>
-                <span class="muted">Connect your Google Sheets to manage and update master data — add, edit, and sync customer records directly from sheets.</span>
-              </li>
+        <li><b>Local Storage Support:</b> Automatically save fetched Google Sheets data to local storage.</li>
 
-              <li>
-                <span class="feature-title">3 — Fetched Google Sheets data stored in local storage</span>
-                <span class="muted">Data fetched from Sheets is cached locally for fast access and offline usage — work in the field without constant connectivity.</span>
-              </li>
+        <li><b>Instant Actions:</b> Call, SMS, and WhatsApp customers instantly from within the app.</li>
 
-              <li>
-                <span class="feature-title">4 — Direct Call, SMS & WhatsApp</span>
-                <span class="muted">One-tap actions to call, send SMS, or open WhatsApp chat with the customer — saves agent time and improves contact rates.</span>
-              </li>
+        <li><b>PTP Tracking:</b> Record Promise To Pay dates and automatically view who committed payment today.</li>
 
-              <li>
-                <span class="feature-title">5 — PTP (Promise To Pay) tracking & daily PTP tab</span>
-                <span class="muted">Record PTP dates for customers. The PTP tab automatically shows today's PTPs so agents can prioritize follow-ups.</span>
-              </li>
+        <li><b>Scheduled Auto Calls:</b> Let CallMate auto-dial customers at a preset time.</li>
 
-              <li>
-                <span class="feature-title">6 — Scheduled auto-calls</span>
-                <span class="muted">Schedule automated calls at predefined times — the app places calls automatically to remind customers about payments.</span>
-              </li>
+        <li><b>Backup & Restore:</b> Secure your full data backup on Google Drive.</li>
 
-              <li>
-                <span class="feature-title">7 — Backup & Restore to Google Drive</span>
-                <span class="muted">Keep backups on Google Drive and restore data when needed — secure your customer databases and settings.</span>
-              </li>
+        <li><b>One-Click Calling List:</b> Call customers one by one and record feedback + PTP entry via calendar.</li>
 
-              <li>
-                <span class="feature-title">8 — Sequential calling list with feedback logging</span>
-                <span class="muted">Call lists play one-by-one with a single click. After each call, agents can record feedback (conversation notes, PTP updates, add to PTP calendar).</span>
-              </li>
+        <li><b>Notes & Cash Accounts:</b> Track income/expenses, cash-in, cash-out, and online payments.</li>
 
-              <li>
-                <span class="feature-title">9 — Notes & cash account management</span>
-                <span class="muted">Maintain payment ledgers — log cash receipts, online payments, transfers and track which account received money.</span>
-              </li>
+        <li><b>Visit Planning:</b> Mark customers as Favourite or Risky and manage them in separate tabs.</li>
 
-              <li>
-                <span class="feature-title">10 — Visit planning & customer tagging</span>
-                <span class="muted">Plan field visits, and tag customers as Favourite or Risky to prioritize actions and manage routes.</span>
-              </li>
+        <li><b>Resolved & Pending Cases:</b> Stay updated with real-time case status.</li>
 
-              <li>
-                <span class="feature-title">11 — Shows resolved & pending cases</span>
-                <span class="muted">Quick view of resolved vs pending accounts so managers and agents instantly see work status.</span>
-              </li>
+        <li><b>Daily Performance Tracking:</b> Know your completed vs pending target percentage.</li>
+    </ul>
 
-              <li>
-                <span class="feature-title">12 — Daily performance tracking</span>
-                <span class="muted">Track targets and achievement (%) per agent — see how much of the daily goal is complete and what remains.</span>
-              </li>
-            </ol>
-          </section>
+    <!-- Screenshot placeholder -->
+    <div class="screenshot">Screenshot Placeholder</div>
+    <div class="screenshot">Screenshot Placeholder</div>
+    <div class="screenshot">Screenshot Placeholder</div>
 
-          <section class="card">
-            <h2>How it helps collection teams</h2>
-            <p class="muted">CallMate reduces manual work, increases contact success, and gives managers real-time visibility. Sync data from Google Sheets, set automated reminders, collect feedback on each call, and maintain auditable payment records.</p>
-          </section>
+</div>
 
-          <section class="card">
-            <h2>Quick setup notes</h2>
-            <ul style="margin:0; padding-left:18px;">
-              <li class="muted">Sign in with a Google account to enable Sheets and Drive integration.</li>
-              <li class="muted">Grant calling and SMS permissions on Android for one-tap dialing and messaging.</li>
-              <li class="muted">Use the PTP calendar to generate daily follow-up lists automatically.</li>
-            </ul>
-          </section>
-        </div>
+<!-- FOOTER DOWNLOAD BUTTON -->
+<div class="footer-download">
+    <a href="#" class="btn btn-green">Download Now</a>
+</div>
 
-        <!-- Right column: screenshots / demo images -->
-        <aside>
-          <div class="card">
-            <h2>Demo screenshots (replace URLs)</h2>
-            <div class="screenshot">
-              <!-- Replace the src attributes with your real screenshot URLs -->
-              <img src="https://via.placeholder.com/600x400?text=Screenshot+1+-+Loan+Record" alt="Screenshot 1 — Loan Record" />
-              <img src="https://via.placeholder.com/600x400?text=Screenshot+2+-+PTP+Tab" alt="Screenshot 2 — PTP Tab" />
-              <img src="https://via.placeholder.com/600x400?text=Screenshot+3+-+Sequential+Call+List" alt="Screenshot 3 — Call List" />
-              <img src="https://via.placeholder.com/600x400?text=Screenshot+4+-+Backup+&+Restore" alt="Screenshot 4 — Backup & Restore" />
-            </div>
-
-            <p class="muted" style="margin-top:10px">To replace screenshots: change the <code>src</code> of each <code>&lt;img&gt;</code> above to your hosted image URL (e.g. GitHub raw URL or any image CDN).</p>
-          </div>
-
-          <div class="card" style="text-align:center">
-            <h2>Download</h2>
-            <p class="muted">Click below to download the app (APK / Play Store link).</p>
-            <!-- This is the final download button requested to be accent bg + white text -->
-            <a class="btn primary" href="https://example.com/your-callmate-download.apk">Download Now</a>
-          </div>
-        </aside>
-      </div>
-
-      <section class="card" style="margin-top:16px;">
-        <h2>Contact & Support</h2>
-        <p class="muted">Need help configuring Google Sheets sync, scheduled calls, or backup settings? Contact <strong>support@yourdomain.com</strong> (replace with your real support email) or include a help section link in your app.</p>
-      </section>
-    </main>
-
-    <footer>
-      <div>© <strong>aksoftlab</strong> — CallMate</div>
-      <div style="margin-top:6px; font-size:12px; color:var(--muted)">Built for field teams • Manage loans • Track PTPs • Backup to Google Drive</div>
-    </footer>
-  </div>
-
-  <!-- Optional small script: smooth scroll for "Features" button -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(function(a){
-      a.addEventListener('click', function(e){
-        var target = document.querySelector(this.getAttribute('href'));
-        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  </script>
 </body>
 </html>
