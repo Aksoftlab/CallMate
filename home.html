@@ -1,278 +1,297 @@
-<!-- Paste this into Blogger HTML editor. Replace placeholder URLs/text (APK link, screenshots, author) as needed. -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CallMate — Smart Calling, Recording & Contact Manager</title>
-  <meta name="description" content="CallMate is a lightweight Android app for smarter calling: clear caller ID, reliable call recording, spam protection, scheduled calls and powerful contact management."/>
-  <!-- Open Graph for social previews -->
-  <meta property="og:title" content="CallMate — Smart Calling, Recording & Contact Manager" />
-  <meta property="og:description" content="CallMate: caller ID, crystal-clear call recorder, spam blocking, call scheduler, fast contact search & easy backup." />
-  <meta property="og:image" content="https://example.com/path/to/callmate-preview.jpg" />
-  <meta property="og:type" content="software" />
-  <meta property="og:url" content="https://example.com/callmate-page" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CallMate — #1 Field CRM For Loan Collection</title>
+  <meta name="description" content="CallMate — Field CRM built for loan collection teams. Manage loan records, sync with Google Sheets, schedule auto-calls, track PTP, backup to Google Drive and more." />
   <style>
-    /* Simple responsive blog post styling */
+    /* Simple single-skin, responsive layout */
     :root{
-      --accent:#0b72ef;
-      --muted:#6b7280;
-      --card-bg:#ffffff;
-      --page-bg:#f7f9fc;
-      --max-width:820px;
+      --max-w:900px;
+      --accent:#0b63d8;
+      --muted:#666;
+      --card:#f8f9fb;
+      --radius:10px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     body{
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--page-bg);
-      color:#111827;
-      line-height:1.6;
-      padding:28px 16px;
-      display:flex;
-      justify-content:center;
+      background:#f2f4f8;
+      color:#222;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-      background:var(--card-bg);
-      border-radius:10px;
-      box-shadow:0 6px 22px rgba(15,23,42,0.08);
-      overflow:hidden;
+    .wrap{
+      max-width:var(--max-w);
+      margin:28px auto;
+      padding:20px;
     }
     header{
-      padding:28px 28px 8px 28px;
-      border-bottom:1px solid #eef2f7;
+      background:linear-gradient(90deg,var(--accent),#1e90ff);
+      color:white;
+      padding:26px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(11,99,216,0.12);
     }
-    .title{
-      font-size:1.6rem;
+    header h1{
       margin:0 0 6px 0;
+      font-size:22px;
       letter-spacing:0.2px;
     }
-    .subtitle{
-      color:var(--muted);
-      margin:0;
-      font-size:0.95rem;
-    }
+    header p { margin:0; opacity:0.95; }
     .hero{
       display:flex;
       gap:18px;
-      padding:18px 28px;
       align-items:center;
+      margin-top:18px;
       flex-wrap:wrap;
     }
-    .hero img{
-      width:140px;
-      height:280px;
-      object-fit:cover;
-      border-radius:10px;
-      box-shadow:0 8px 30px rgba(11,114,239,0.08);
-      background:#eee;
+    .cta{
+      margin-top:18px;
     }
-    .hero .quick{
-      flex:1;
-      min-width:220px;
+    .btn{
+      display:inline-block;
+      background:white;
+      color:var(--accent);
+      padding:10px 18px;
+      border-radius:8px;
+      font-weight:600;
+      text-decoration:none;
+      box-shadow:0 6px 18px rgba(11,99,216,0.12);
+    }
+    .btn.secondary{
+      background:transparent;
+      color:white;
+      border:1px solid rgba(255,255,255,0.2);
+    }
+    main{
+      margin-top:18px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:16px;
+      margin:14px 0;
+      box-shadow:0 6px 18px rgba(15,20,30,0.03);
+    }
+    h2{ margin:8px 0 12px 0; font-size:18px; }
+    ol.features{
+      padding-left:18px;
+      margin:0;
+    }
+    ol.features li{
+      margin:12px 0;
+    }
+    .feature-title{ font-weight:700; display:block; margin-bottom:6px; }
+    .muted{ color:var(--muted); font-size:14px; }
+    .screenshot{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+      margin-top:10px;
+    }
+    .screenshot img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.04);
+      background:linear-gradient(180deg,#fff,#eee);
+    }
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 260px;
+      gap:16px;
+    }
+    @media (max-width:880px){
+      .two-col{ grid-template-columns:1fr; }
+    }
+    footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding:16px;
     }
     .badge{
       display:inline-block;
       padding:6px 10px;
-      background:var(--accent);
-      color:#fff;
       border-radius:999px;
-      font-size:0.85rem;
-      margin-bottom:10px;
-    }
-    .features{
-      padding:18px 28px;
-    }
-    h2{ margin-top:0; }
-    ul.features-list{
-      list-style:none;
-      padding:0;
-      margin:10px 0 0 0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:12px;
-    }
-    ul.features-list li{
-      background:#f8fafc;
-      padding:12px;
-      border-radius:8px;
-      border:1px solid #eef2f7;
-      font-size:0.95rem;
-    }
-    .section{
-      padding:18px 28px;
-      border-top:1px dashed #eef2f7;
-    }
-    .download-wrap{
-      padding:22px 28px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .btn-download{
-      background:var(--accent);
-      color:white;
-      padding:14px 22px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:1.05rem;
-      box-shadow:0 10px 30px rgba(11,114,239,0.12);
+      background:rgba(11,99,216,0.08);
+      color:var(--accent);
+      font-weight:700;
+      font-size:13px;
     }
     .meta{
+      font-size:13px;
       color:var(--muted);
-      font-size:0.92rem;
+      margin-top:6px;
     }
-    .badge-small{
-      display:inline-block;
-      font-size:0.82rem;
-      padding:6px 8px;
-      border-radius:6px;
-      background:#f1f5f9;
-      color:#0f172a;
-      margin-right:8px;
-    }
-    .faq p{margin:8px 0;}
-    footer{
-      padding:18px 28px;
-      color:var(--muted);
-      font-size:0.92rem;
-      border-top:1px solid #f1f5f9;
-    }
-    @media (max-width:540px){
-      .hero img{ width:110px; height:220px; }
-    }
+    /* small helper for list numbers */
+    ol.features li::marker{ font-weight:700; color:var(--accent); }
   </style>
-
-  <!-- JSON-LD structured data (replace placeholders) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "CallMate",
-    "operatingSystem": "ANDROID",
-    "applicationCategory": "Communication",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.6",
-      "ratingCount": "1245"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "url": "https://example.com/callmate-page",
-    "image":"https://example.com/path/to/callmate-preview.jpg",
-    "description":"CallMate — A lightweight, privacy-first calling app for Android with caller ID, call recording, spam protection, call scheduling and robust contact management."
-  }
-  </script>
 </head>
 <body>
-  <article class="container" itemscope itemtype="http://schema.org/SoftwareApplication">
+  <div class="wrap">
     <header>
-      <h1 class="title" itemprop="name">CallMate — Smart Calling & Contact Manager</h1>
-      <p class="subtitle">Lightweight Android calling app with built-in call recorder, spam protection, quick contact tools and cloud backup.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div>
+          <h1>CallMate — #1 Field CRM For Loan Collection</h1>
+          <p class="muted">Designed for field agents and collection teams — track loans, schedule calls, sync data, and close more recoveries.</p>
+        </div>
+        <div style="text-align:right">
+          <div class="badge">Field CRM • Loan Collection</div>
+          <div class="meta">One single skin — full post below</div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div style="flex:1; min-width:260px;">
+          <p class="muted" style="margin-top:12px">CallMate brings your field collection operations together: contact customers, record PTPs, schedule auto-calls, sync with Google Sheets and Drive, keep local backups, manage cash accounts, and track daily performance — all from one app.</p>
+
+          <div class="cta">
+            <!-- Replace href with your download link (apk or store) -->
+            <a class="btn" href="https://example.com/your-callmate-download.apk" id="download-now">Download Now</a>
+            <a class="btn secondary" href="#features">Features</a>
+          </div>
+        </div>
+
+        <!-- Demo screenshot placeholder -->
+        <div style="width:220px; min-width:180px;">
+          <img src="https://via.placeholder.com/420x260?text=CallMate+Preview" alt="CallMate preview screenshot" style="width:100%; border-radius:8px;"/>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-      <img src="https://example.com/path/to/screenshot1.jpg" alt="CallMate app preview" itemprop="image" />
-      <div class="quick">
-        <div class="badge">Free • Android</div>
-        <p class="meta"><span class="badge-small">Version:</span> <strong itemprop="softwareVersion">1.0.0</strong> &nbsp; <span class="badge-small">Size:</span> 8.6 MB</p>
-        <p style="margin-top:12px;">CallMate makes everyday calling smarter and safer. Get instant caller identification, reliable local call recording, and powerful contact tools — all in an app designed for speed and privacy.</p>
-        <p style="margin-top:12px;color:var(--muted);font-size:0.95rem;">Supports Android 7.0+ • Offline recording • Optional cloud backup</p>
+    <main>
+      <div class="two-col">
+        <div>
+          <section id="features" class="card">
+            <h2>App Features (English)</h2>
+
+            <ol class="features">
+              <li>
+                <span class="feature-title">1 — Complete loan record for every customer</span>
+                <span class="muted">Maintain a full loan history per customer: outstanding amount, EMI schedule, last payments, next due date and custom notes.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">2 — Google Sheets data management</span>
+                <span class="muted">Connect your Google Sheets to manage and update master data — add, edit, and sync customer records directly from sheets.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">3 — Fetched Google Sheets data stored in local storage</span>
+                <span class="muted">Data fetched from Sheets is cached locally for fast access and offline usage — work in the field without constant connectivity.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">4 — Direct Call, SMS & WhatsApp</span>
+                <span class="muted">One-tap actions to call, send SMS, or open WhatsApp chat with the customer — saves agent time and improves contact rates.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">5 — PTP (Promise To Pay) tracking & daily PTP tab</span>
+                <span class="muted">Record PTP dates for customers. The PTP tab automatically shows today's PTPs so agents can prioritize follow-ups.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">6 — Scheduled auto-calls</span>
+                <span class="muted">Schedule automated calls at predefined times — the app places calls automatically to remind customers about payments.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">7 — Backup & Restore to Google Drive</span>
+                <span class="muted">Keep backups on Google Drive and restore data when needed — secure your customer databases and settings.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">8 — Sequential calling list with feedback logging</span>
+                <span class="muted">Call lists play one-by-one with a single click. After each call, agents can record feedback (conversation notes, PTP updates, add to PTP calendar).</span>
+              </li>
+
+              <li>
+                <span class="feature-title">9 — Notes & cash account management</span>
+                <span class="muted">Maintain payment ledgers — log cash receipts, online payments, transfers and track which account received money.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">10 — Visit planning & customer tagging</span>
+                <span class="muted">Plan field visits, and tag customers as Favourite or Risky to prioritize actions and manage routes.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">11 — Shows resolved & pending cases</span>
+                <span class="muted">Quick view of resolved vs pending accounts so managers and agents instantly see work status.</span>
+              </li>
+
+              <li>
+                <span class="feature-title">12 — Daily performance tracking</span>
+                <span class="muted">Track targets and achievement (%) per agent — see how much of the daily goal is complete and what remains.</span>
+              </li>
+            </ol>
+          </section>
+
+          <section class="card">
+            <h2>How it helps collection teams</h2>
+            <p class="muted">CallMate reduces manual work, increases contact success, and gives managers real-time visibility. Sync data from Google Sheets, set automated reminders, collect feedback on each call, and maintain auditable payment records.</p>
+          </section>
+
+          <section class="card">
+            <h2>Quick setup notes</h2>
+            <ul style="margin:0; padding-left:18px;">
+              <li class="muted">Sign in with a Google account to enable Sheets and Drive integration.</li>
+              <li class="muted">Grant calling and SMS permissions on Android for one-tap dialing and messaging.</li>
+              <li class="muted">Use the PTP calendar to generate daily follow-up lists automatically.</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Right column: screenshots / demo images -->
+        <aside>
+          <div class="card">
+            <h2>Demo screenshots (replace URLs)</h2>
+            <div class="screenshot">
+              <!-- Replace the src attributes with your real screenshot URLs -->
+              <img src="https://via.placeholder.com/600x400?text=Screenshot+1+-+Loan+Record" alt="Screenshot 1 — Loan Record" />
+              <img src="https://via.placeholder.com/600x400?text=Screenshot+2+-+PTP+Tab" alt="Screenshot 2 — PTP Tab" />
+              <img src="https://via.placeholder.com/600x400?text=Screenshot+3+-+Sequential+Call+List" alt="Screenshot 3 — Call List" />
+              <img src="https://via.placeholder.com/600x400?text=Screenshot+4+-+Backup+&+Restore" alt="Screenshot 4 — Backup & Restore" />
+            </div>
+
+            <p class="muted" style="margin-top:10px">To replace screenshots: change the <code>src</code> of each <code>&lt;img&gt;</code> above to your hosted image URL (e.g. GitHub raw URL or any image CDN).</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <h2>Download</h2>
+            <p class="muted">Click below to download the app (APK / Play Store link).</p>
+            <a class="btn" href="https://example.com/your-callmate-download.apk">Download Now</a>
+          </div>
+        </aside>
       </div>
-    </section>
 
-    <section class="features">
-      <h2>Why use CallMate?</h2>
-      <p>CallMate focuses on the calling experience: clean UI, low battery use and features you actually need — no bloatware. Perfect for power users, field workers and anyone who wants better control over calls and contacts.</p>
-
-      <ul class="features-list">
-        <li><strong>Crystal Caller ID</strong><br/>Identify unknown numbers quickly before you pick up.</li>
-        <li><strong>Reliable Call Recording</strong><br/>Automatic or manual recording with clear audio and secure local storage.</li>
-        <li><strong>Spam & Robocall Blocker</strong><br/>Automatic detection and a one-tap block/report option.</li>
-        <li><strong>Call Scheduler</strong><br/>Schedule calls or reminders — never forget an important call again.</li>
-        <li><strong>Fast Contact Search</strong><br/>Smart filtering, duplicate contact merge and custom labels.</li>
-        <li><strong>Backup & Restore</strong><br/>Export contacts and recordings to local storage or optional cloud.</li>
-        <li><strong>Low Resource Use</strong><br/>Lightweight: saves battery and runs smoothly on older devices.</li>
-        <li><strong>Privacy-first</strong><br/>Recordings and contact data stay on your device unless you choose to export them.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Detailed Features</h2>
-      <h3>Caller ID & Call Screen</h3>
-      <p>Instantly see who is calling with name, location (if available) and spam score. Customize the in-call screen and quick actions (message, record, block).</p>
-
-      <h3>Call Recording</h3>
-      <p>Record all calls automatically or use manual record. Save recordings in MP3 format with options to trim and share. Recordings are stored locally and can be backed up.</p>
-
-      <h3>Spam Protection</h3>
-      <p>Community-powered spam list and offline heuristics reduce unwanted calls. Report new spammers with a single tap.</p>
-
-      <h3>Contact Management</h3>
-      <p>Fast contact merge, custom tags and group messaging make large-address-book management painless. Search by name, number or tag.</p>
-
-      <h3>Extras</h3>
-      <ul>
-        <li>Dark mode and theme options</li>
-        <li>Widget for one-tap dial</li>
-        <li>Lightweight — minimal permissions required</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Screenshots</h2>
-      <p>Click any image to view full size (replace these sample images with your real screenshots):</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <img src="https://example.com/path/to/screenshot1.jpg" alt="Screenshot 1" style="width:150px;height:300px;object-fit:cover;border-radius:8px;"/>
-        <img src="https://example.com/path/to/screenshot2.jpg" alt="Screenshot 2" style="width:150px;height:300px;object-fit:cover;border-radius:8px;"/>
-        <img src="https://example.com/path/to/screenshot3.jpg" alt="Screenshot 3" style="width:150px;height:300px;object-fit:cover;border-radius:8px;"/>
-      </div>
-    </section>
-
-    <section class="section faq">
-      <h2>FAQ</h2>
-      <p><strong>Is CallMate free?</strong><br/>Yes — core features are free. Some optional premium features (cloud backup, advanced spam lists) may require in-app purchase.</p>
-
-      <p><strong>Do you store my call recordings?</strong><br/>No — recordings are saved on your device by default. You can export them manually or enable optional encrypted cloud backup.</p>
-
-      <p><strong>Which Android versions are supported?</strong><br/>Android 7.0 (Nougat) and above.</p>
-    </section>
-
-    <section class="section">
-      <h2>Permissions</h2>
-      <p class="meta">CallMate requests only the permissions necessary to deliver features: Phone (to identify incoming calls), Microphone (to record calls), Storage (to save recordings & backups), Contacts (to show caller names). The app will prompt permission requests at runtime — you can choose to grant or deny any permission.</p>
-    </section>
-
-    <div class="download-wrap" id="download">
-      <!-- Replace href with your real APK or Play Store link -->
-      <a class="btn-download" href="https://example.com/CallMate.apk" download rel="noopener" title="Download CallMate APK">
-        ⬇️ Download Now
-      </a>
-      <div style="text-align:center;">
-        <div class="meta">Direct APK • Version <strong>1.0.0</strong> • Size: <strong>8.6 MB</strong></div>
-        <div style="margin-top:6px;color:var(--muted);font-size:0.88rem;">If you prefer Google Play, use the Play Store link instead (replace the APK link above).</div>
-      </div>
-    </div>
-
-    <section class="section">
-      <h2>Release Notes (changelog)</h2>
-      <ul>
-        <li><strong>1.0.0</strong> — Initial public release: caller ID, call recording, spam blocking, call scheduler, contact merge and backup features.</li>
-      </ul>
-    </section>
+      <section class="card" style="margin-top:16px;">
+        <h2>Contact & Support</h2>
+        <p class="muted">Need help configuring Google Sheets sync, scheduled calls, or backup settings? Contact <strong>support@yourdomain.com</strong> (replace with your real support email) or include a help section link in your app.</p>
+      </section>
+    </main>
 
     <footer>
-      <div><strong>Developer:</strong> Your Name or Company</div>
-      <div style="margin-top:6px;">If you have questions, feature requests or bug reports, email us at <a href="mailto:support@example.com">support@example.com</a>.</div>
+      <div>© <strong>aksoftlab</strong> — CallMate</div>
+      <div style="margin-top:6px; font-size:12px; color:var(--muted)">Built for field teams • Manage loans • Track PTPs • Backup to Google Drive</div>
     </footer>
-  </article>
+  </div>
+
+  <!-- Optional small script: smooth scroll for "Features" button -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
 </body>
   </html>
